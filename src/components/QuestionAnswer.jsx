@@ -39,7 +39,7 @@ class QuestionAnswer extends Component {
             </nav>
           </Link>
         </header>
-        <div className="card question-container">
+        <div className=" w3-animate-right card question-container">
           {currentData && (
             <>
               <div className="card-title">{currentData.title}</div>

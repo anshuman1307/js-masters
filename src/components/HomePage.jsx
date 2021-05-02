@@ -10,7 +10,7 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="w3-animate-left container">
         <header className="header">
           JS Masters
           {/* <Link to={`/js-masters`}>
