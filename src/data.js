@@ -29,7 +29,7 @@ export const data = [
     id: 4,
     title: "Function Currying",
     question: " Implement function currying to execute below function",
-    input: " total(1)(2)(3)(4)(5)",
+    input: " total(1)(2)(3)(4)(5) ",
     output: "15",
     code: `const sum = function (a) {\n  return function (b) {\n    if (b) {\n      return sum(a + b); // it takes an argument and return a function which again can take an argument.\n    }\n    return a; // it will keep on adding 1+2+3+4..\n  };\n};\n\nconsole.log(sum(1)(2)()); //3\nconsole.log(sum(1)(2)(3)(4)()); //10\n`,
   },
