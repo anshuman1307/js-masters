@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Prism from "prismjs";
 import copy from "../clone-regular.svg";
 import backarrow from "../arrow-left-solid.svg";
+import star from "../star.svg";
+import javascript from "../javascript.svg";
 
 class QuestionAnswer extends Component {
   constructor(props) {
@@ -32,9 +34,9 @@ class QuestionAnswer extends Component {
     return (
       <>
         <header className="header">
-          JS Masters
+        <span><img style={{position:"relative",bottom:"8%",right:"2%",marginLeft:"7%"}} src={javascript} alt="back" /> <span style={{fontSize:"28px",position:"relative",top:"13%"}}>masters</span></span>
           <Link to={`/js-masters`}>
-            <nav style={{ position: "fixed", top: "-5px", left: "3%" }}>
+            <nav style={{ position: "fixed", top: "13px", left: "3%" }}>
               <img src={backarrow} alt="back" />
             </nav>
           </Link>
