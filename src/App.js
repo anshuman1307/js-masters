@@ -8,7 +8,6 @@ import { createBrowserHistory } from "history";
 const history = createBrowserHistory();
 
 function App() {
-  console.log(history);
   return (
     <HashRouter>
       <>
