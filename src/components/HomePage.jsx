@@ -14,7 +14,7 @@ class HomePage extends Component {
     return (
       <div className="w3-animate-left container">
         <header className="header">
-        <span><img style={{position:"relative",bottom:"8%",right:"2%",marginLeft:"7%"}} src={javascript} alt="back" /> <span style={{fontSize:"28px",position:"relative",top:"13%"}}>masters</span></span>
+        <span><img style={{position:"relative",bottom:"4%",right:"2%",marginLeft:"7%"}} src={javascript} alt="back" /> <span style={{fontSize:"28px",position:"relative",top:"16%"}}>masters</span></span>
           <div
             className="w3-sidebar w3-bar-block w3-border-right"
             style={{ display: "none" }}

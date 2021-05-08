@@ -29,11 +29,12 @@ pre[class*="language-"] {
 .header {
   background-color: rgb(44, 42, 42);
   border-color: #dee0e1 !important;
+  text-align: center;
   height: 55px;
   color: white;
   font-size: 0;
   font-weight: 900;
-  font-family:cursive;
+  font-family: monospace;
 }
 .container {
   margin: auto;
@@ -109,8 +110,8 @@ pre[class*="language-"] {
   .question-container {
     padding: 5%;
   }
-  .star{
-    position:relative;
-    float:right;
+  .star {
+    position: relative;
+    float: right;
   }
 }
