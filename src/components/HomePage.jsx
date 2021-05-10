@@ -13,8 +13,11 @@ class HomePage extends Component {
   render() {
     return (
       <>
-      <Header back="false"/>
-        <div className="w3-animate-left container" style={{position:"relative",top:"55px"}}>
+        <Header back="false" />
+        <div
+          className="w3-animate-left container"
+          style={{ position: "relative", top: "55px" }}
+        >
           {data.map((val) => {
             let route = val.title.split(" ").join("-").toLowerCase();
             return (
@@ -32,7 +35,13 @@ class HomePage extends Component {
                         View Code
                       </button>
                     </Link>
-                    <img className="star" src={star} alt="back" width="25px" height="25px" />
+                    <img
+                      className="star"
+                      src={star}
+                      alt="back"
+                      width="25px"
+                      height="25px"
+                    />
                   </div>
                 </div>
               </div>

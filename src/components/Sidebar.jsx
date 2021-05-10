@@ -7,15 +7,10 @@ import javascript from "../javascript.svg";
 class Sidebar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
   render() {
-    return (
-      <div className="sidebar w3-animate-left container">
-       
-      </div>
-    );
+    return <div className="sidebar w3-animate-left container"></div>;
   }
 }
 

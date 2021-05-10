@@ -9,6 +9,7 @@ import saved from "../saved.svg";
 import feedback from "../feedback.svg";
 import like from "../like.svg";
 import contact from "../contact.svg";
+import multiply from "../multiply.svg";
 
 class Header extends Component {
   constructor(props) {
@@ -18,11 +19,18 @@ class Header extends Component {
     };
   }
   toggleSidebar = () => {
-    document.getElementById("mySidenav").style.opacity=document.getElementById("mySidenav").style.opacity == "1"?"0":"1";
-    document.getElementById("overlay").style.opacity=document.getElementById("overlay").style.opacity == "0.5"?"0":"0.5";
-    document.getElementById("mySidenav").style.visibility=document.getElementById("mySidenav").style.visibility == "visible"?"hidden":"visible";
-    document.getElementById("overlay").style.visibility=document.getElementById("overlay").style.visibility == "visible"?"hidden":"visible";
-    
+    document.getElementById("mySidenav").style.opacity =
+      document.getElementById("mySidenav").style.opacity == "1" ? "0" : "1";
+    document.getElementById("overlay").style.opacity =
+      document.getElementById("overlay").style.opacity == "0.5" ? "0" : "0.5";
+    document.getElementById("mySidenav").style.visibility =
+      document.getElementById("mySidenav").style.visibility == "visible"
+        ? "hidden"
+        : "visible";
+    document.getElementById("overlay").style.visibility =
+      document.getElementById("overlay").style.visibility == "visible"
+        ? "hidden"
+        : "visible";
   };
   render() {
     let style =
@@ -55,7 +63,7 @@ class Header extends Component {
                   display: "inline-block",
                 }}
               >
-                <img src={backarrow} alt="back"  width="23px" height="23px" />
+                <img src={backarrow} alt="back" width="23px" height="23px" />
               </nav>
             </Link>
           )}
@@ -70,7 +78,7 @@ class Header extends Component {
               aria-hidden="true"
             >
               <path
-                fill="white"
+                fill="rgb(15,43,60)"
                 fillRule="evenodd"
                 d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
               ></path>
@@ -88,39 +96,61 @@ class Header extends Component {
             }}
             src={javascript}
             alt="back"
-            width="55px" height="55px"
+            width="45px"
+            height="45px"
           />{" "}
-          <span style={{ fontSize: "28px", position: "relative", top: "16%" }}>
+          <span style={{ fontSize: "28px", position: "relative", top: "13%" }}>
             masters
           </span>
         </span>
         {this.state.sidebar && (
           <>
-            <div id="overlay" className="overlay" style={{opacity:"0",visibility:"hidden"}} onClick={() => this.toggleSidebar()}></div>
-            <div id="mySidenav" className="sidenav" style={{opacity:"0",visibility:"hidden"}}>
+            <div
+              id="overlay"
+              className="overlay"
+              style={{ opacity: "0", visibility: "hidden" }}
+              onClick={() => this.toggleSidebar()}
+            ></div>
+            <div
+              id="mySidenav"
+              className="sidenav"
+              style={{ opacity: "0", visibility: "hidden" }}
+            >
               <div className="user">
-                <img src={user} alt="back"  width="70px" height="70px"  />
-                <a href="#"  onClick={() => this.toggleSidebar()} className="closebtn">
-                  &times;
-                </a>
+                <button className="signin-btn">Login</button>
+                <img
+                  src={multiply}
+                  alt="back"
+                  width="19px"
+                  height="19px"
+                  style={{
+                    float: "right",
+                    position: "relative",
+                    top: "13px",
+                    right: "4%",
+                    color: "rgb(15,43,60)",
+                  }}
+                />
               </div>
-              <a href="#" >
-                <img src={saved} alt="back"  width="19px" height="19px" /> Saved items
+              <a href="#">
+                <img src={saved} alt="back" width="19px" height="19px" /> Saved
+                items
               </a>
-              <a href="#" >
-                <img src={like} alt="back"  width="19px" height="19px" /> Popular
+              <a href="#">
+                <img src={like} alt="back" width="19px" height="19px" /> Popular
               </a>
-              <a href="#" >
-                <img src={feedback} alt="back"  width="19px" height="19px" /> Feedback
+              <a href="#">
+                <img src={feedback} alt="back" width="19px" height="19px" />{" "}
+                Feedback
               </a>
-              <a href="#" >
-                <img src={contact} alt="back" width="19px" height="19px" /> Contact Us
+              <a href="#">
+                <img src={contact} alt="back" width="19px" height="19px" />{" "}
+                Contact Us
               </a>
               {/* <a href="#"  style={{position:"fixed",bottom:"2%",fontSize:"15px",color:"#35a5c9",textDecoration:"underline"}}>
               See icons attributions
               </a> */}
             </div>
-            
           </>
         )}
       </header>
