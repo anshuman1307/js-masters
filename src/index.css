@@ -125,6 +125,7 @@ pre[class*="language-"] {
 
   .sidenav a:hover {
     color: black;
+    font-weight: 600;
   }
 
   .sidenav .closebtn {

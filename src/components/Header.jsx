@@ -123,6 +123,7 @@ class Header extends Component {
                   alt="back"
                   width="19px"
                   height="19px"
+                  onClick={() => this.toggleSidebar()}
                   style={{
                     float: "right",
                     position: "relative",
@@ -132,18 +133,18 @@ class Header extends Component {
                   }}
                 />
               </div>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={saved} alt="back" width="19px" height="19px" /> Saved
                 items
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={like} alt="back" width="19px" height="19px" /> Popular
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={feedback} alt="back" width="19px" height="19px" />{" "}
                 Feedback
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={contact} alt="back" width="19px" height="19px" />{" "}
                 Contact Us
               </a>
