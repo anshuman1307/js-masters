@@ -16,6 +16,7 @@ class Header extends Component {
     super(props);
     this.state = {
       sidebar: true,
+      isLoggedIn:false
     };
   }
   toggleSidebar = () => {
@@ -31,6 +32,9 @@ class Header extends Component {
       document.getElementById("overlay").style.visibility == "visible"
         ? "hidden"
         : "visible";
+  };
+  loginClickHandler = () => {
+    this.setState({isLoggedIn:!this.state.isLoggedIn})
   };
   render() {
     let style =
@@ -118,7 +122,21 @@ class Header extends Component {
               style={{ opacity: "0", visibility: "hidden" }}
             >
               <div className="user">
-                <button className="signin-btn">Login</button>
+                {this.state.isLoggedIn && (
+                  <div className="sidebar-profile">
+                    <img src={user} alt="back" width="40px" height="40px" />{" "}
+                    <div style={{fontWeight:300}}>Anshuman Sharma</div>
+                  </div>
+                )}
+                {!this.state.isLoggedIn && (
+                  <button
+                    className="signin-btn"
+                    onClick={() => this.loginClickHandler()}
+                  >
+                    Login
+                  </button>
+                )}
+
                 <img
                   src={multiply}
                   alt="back"
@@ -127,9 +145,9 @@ class Header extends Component {
                   onClick={() => this.toggleSidebar()}
                   style={{
                     float: "right",
-                    position: "relative",
-                    top: "11px",
-                    right: "4%",
+                    position: "fixed",
+                    top: "9%",
+                    right: "37%",
                     color: "rgb(15,43,60)",
                   }}
                 />
