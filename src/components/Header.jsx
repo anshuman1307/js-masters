@@ -90,16 +90,17 @@ class Header extends Component {
           <img
             style={{
               position: "relative",
-              bottom: "4%",
+              bottom: "0%",
+              top:"2%",
               right: "2%",
               marginLeft: "7%",
             }}
             src={javascript}
             alt="back"
-            width="45px"
-            height="45px"
+            width="50px"
+            height="50px"
           />{" "}
-          <span style={{ fontSize: "28px", position: "relative", top: "23%" }}>
+          <span style={{ fontSize: "24px", position: "relative", top: "32%" }}>
             masters
           </span>
         </span>
@@ -127,7 +128,7 @@ class Header extends Component {
                   style={{
                     float: "right",
                     position: "relative",
-                    top: "13px",
+                    top: "11px",
                     right: "4%",
                     color: "rgb(15,43,60)",
                   }}

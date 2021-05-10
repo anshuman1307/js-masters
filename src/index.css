@@ -78,7 +78,7 @@ pre[class*="language-"] {
     width: 157px;
     height: 39px;
     top: 2%;
-    left: 0;
+    right: 15%;
     color: white;
     font-size: 18px;
     background-color: rgb(16 17 19 / 82%);
@@ -86,7 +86,7 @@ pre[class*="language-"] {
   .overlay {
     float: right;
     height: 100%;
-    width: 30%;
+    width: 35%;
     position: fixed;
     z-index: 1;
     top: 55px;
@@ -97,7 +97,7 @@ pre[class*="language-"] {
   }
   .sidenav {
     height: 100%;
-    width: 70%;
+    width: 65%;
     position: fixed;
     z-index: 1;
     top: 55px;
@@ -109,7 +109,7 @@ pre[class*="language-"] {
   }
 
   .sidenav a {
-    padding: 8px 8px 19px 40px;
+    padding: 8px 8px 19px 18px;
     text-decoration: none;
     font-size: 19px;
     color: rgb(15, 43, 60);
