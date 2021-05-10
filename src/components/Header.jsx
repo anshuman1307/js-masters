@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { data } from "../data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import star from "../star.svg";
-import javascript from "../javascript.svg";
+import javascript from "../javascript.png";
 import backarrow from "../arrow-left-solid.svg";
 import user from "../user.svg";
 import saved from "../saved.svg";
@@ -99,7 +99,7 @@ class Header extends Component {
             width="45px"
             height="45px"
           />{" "}
-          <span style={{ fontSize: "28px", position: "relative", top: "13%" }}>
+          <span style={{ fontSize: "28px", position: "relative", top: "23%" }}>
             masters
           </span>
         </span>
