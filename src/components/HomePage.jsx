@@ -16,7 +16,7 @@ class HomePage extends Component {
         <Header back="false" />
         <div
           className="w3-animate-left container"
-          style={{ position: "relative", top: "55px" }}
+          style={{ position: "relative", top: "67px" }}
         >
           {data.map((val) => {
             let route = val.title.split(" ").join("-").toLowerCase();

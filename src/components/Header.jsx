@@ -41,20 +41,20 @@ class Header extends Component {
       this.props.back == "true"
         ? {
             position: "absolute",
-            top: "32%",
+            top: "34%",
             left: "11%",
             display: "inline-block",
           }
         : {
             position: "absolute",
-            top: "32%",
-            left: "4%",
+            top: "34%",
+            left: "5%",
             display: "inline-block",
           };
     return (
       <header
         className="header"
-        style={{ position: "fixed", top: "0", zIndex: "99", width: "100%" }}
+        style={{ position: "fixed", top: "0", zIndex: "99", width: "100%",height:"9%" }}
       >
         <div>
           {this.props.back == "true" && (
@@ -62,7 +62,7 @@ class Header extends Component {
               <nav
                 style={{
                   position: "fixed",
-                  top: "17px",
+                  top: "24px",
                   left: "3%",
                   display: "inline-block",
                 }}
@@ -73,20 +73,11 @@ class Header extends Component {
           )}
           <span style={style} onClick={() => this.toggleSidebar()}>
             {" "}
-            <svg
-              height="24"
-              className="octicon octicon-three-bars"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="24"
-              aria-hidden="true"
-            >
-              <path
-                fill="rgb(15,43,60)"
-                fillRule="evenodd"
-                d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
-              ></path>
-            </svg>
+            <svg viewBox="0 0 100 80" width="30" height="30" fill="rgb(15,43,60)">
+  <rect width="85" height="7" fill="rgb(15,43,60)"></rect>
+  <rect y="25" width="85" height="7" fill="rgb(15,43,60)"></rect>
+  <rect y="50" width="85" height="7" fill="rgb(15,43,60)"></rect>
+</svg>
           </span>
         </div>
 
@@ -95,14 +86,14 @@ class Header extends Component {
             style={{
               position: "relative",
               bottom: "0%",
-              top: "2%",
+              top: "7%",
               right: "2%",
               marginLeft: "7%",
             }}
             src={javascript}
             alt="back"
-            width="50px"
-            height="50px"
+            width="60px"
+            height="60px"
           />{" "}
           <span style={{ fontSize: "24px", position: "relative", top: "32%" }}>
             masters
@@ -146,8 +137,8 @@ class Header extends Component {
                   style={{
                     float: "right",
                     position: "fixed",
-                    top: "9%",
-                    right: "37%",
+                    top: "11%",
+                    right: "39%",
                     color: "rgb(15,43,60)",
                   }}
                 />

@@ -38,9 +38,9 @@ class QuestionAnswer extends Component {
         <Header back="true" />
         <div
           className=" w3-animate-right card question-container"
-          style={{ position: "relative", top: "55px" }}
+          style={{ position: "relative", top: "67px" }}
         >
-          {currentData && (
+         {currentData && (
             <>
               <div className="card-title">{currentData.title}</div>
               <div className="card-text">{currentData.question}</div>
