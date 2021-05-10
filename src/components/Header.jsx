@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { data } from "../data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import star from "../star.svg";
-import javascript from "../javascript.svg";
+import javascript from "../javascript.png";
 import backarrow from "../arrow-left-solid.svg";
 import user from "../user.svg";
 import saved from "../saved.svg";
@@ -16,6 +16,7 @@ class Header extends Component {
     super(props);
     this.state = {
       sidebar: true,
+      isLoggedIn:false
     };
   }
   toggleSidebar = () => {
@@ -32,18 +33,21 @@ class Header extends Component {
         ? "hidden"
         : "visible";
   };
+  loginClickHandler = () => {
+    this.setState({isLoggedIn:!this.state.isLoggedIn})
+  };
   render() {
     let style =
       this.props.back == "true"
         ? {
             position: "absolute",
-            top: "27%",
+            top: "32%",
             left: "11%",
             display: "inline-block",
           }
         : {
             position: "absolute",
-            top: "27%",
+            top: "32%",
             left: "4%",
             display: "inline-block",
           };
@@ -58,7 +62,7 @@ class Header extends Component {
               <nav
                 style={{
                   position: "fixed",
-                  top: "15px",
+                  top: "17px",
                   left: "3%",
                   display: "inline-block",
                 }}
@@ -90,16 +94,17 @@ class Header extends Component {
           <img
             style={{
               position: "relative",
-              bottom: "4%",
+              bottom: "0%",
+              top: "2%",
               right: "2%",
               marginLeft: "7%",
             }}
             src={javascript}
             alt="back"
-            width="45px"
-            height="45px"
+            width="50px"
+            height="50px"
           />{" "}
-          <span style={{ fontSize: "28px", position: "relative", top: "13%" }}>
+          <span style={{ fontSize: "24px", position: "relative", top: "32%" }}>
             masters
           </span>
         </span>
@@ -117,33 +122,48 @@ class Header extends Component {
               style={{ opacity: "0", visibility: "hidden" }}
             >
               <div className="user">
-                <button className="signin-btn">Login</button>
+                {this.state.isLoggedIn && (
+                  <div className="sidebar-profile">
+                    <img src={user} alt="back" width="40px" height="40px" />{" "}
+                    <div style={{fontWeight:300}}>Anshuman Sharma</div>
+                  </div>
+                )}
+                {!this.state.isLoggedIn && (
+                  <button
+                    className="signin-btn"
+                    onClick={() => this.loginClickHandler()}
+                  >
+                    Login
+                  </button>
+                )}
+
                 <img
                   src={multiply}
                   alt="back"
                   width="19px"
                   height="19px"
+                  onClick={() => this.toggleSidebar()}
                   style={{
                     float: "right",
-                    position: "relative",
-                    top: "13px",
-                    right: "4%",
+                    position: "fixed",
+                    top: "9%",
+                    right: "37%",
                     color: "rgb(15,43,60)",
                   }}
                 />
               </div>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={saved} alt="back" width="19px" height="19px" /> Saved
                 items
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={like} alt="back" width="19px" height="19px" /> Popular
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={feedback} alt="back" width="19px" height="19px" />{" "}
                 Feedback
               </a>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <img src={contact} alt="back" width="19px" height="19px" />{" "}
                 Contact Us
               </a>
