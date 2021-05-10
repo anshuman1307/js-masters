@@ -81,6 +81,7 @@ pre[class*="language-"] {
     right: 15%;
     color: white;
     font-size: 18px;
+    border-radius: 5px;
     background-color: rgb(16 17 19 / 82%);
   }
   .overlay {

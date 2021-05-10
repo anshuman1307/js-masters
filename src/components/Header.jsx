@@ -37,13 +37,13 @@ class Header extends Component {
       this.props.back == "true"
         ? {
             position: "absolute",
-            top: "27%",
+            top: "32%",
             left: "11%",
             display: "inline-block",
           }
         : {
             position: "absolute",
-            top: "27%",
+            top: "32%",
             left: "4%",
             display: "inline-block",
           };
@@ -58,7 +58,7 @@ class Header extends Component {
               <nav
                 style={{
                   position: "fixed",
-                  top: "15px",
+                  top: "17px",
                   left: "3%",
                   display: "inline-block",
                 }}
@@ -91,7 +91,7 @@ class Header extends Component {
             style={{
               position: "relative",
               bottom: "0%",
-              top:"2%",
+              top: "2%",
               right: "2%",
               marginLeft: "7%",
             }}
