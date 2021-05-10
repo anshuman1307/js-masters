@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { data } from "../data";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Prism from "prismjs";
+import Header from "./Header.jsx";
 import copy from "../clone-regular.svg";
 import backarrow from "../arrow-left-solid.svg";
 import star from "../star.svg";
@@ -16,6 +17,7 @@ class QuestionAnswer extends Component {
   }
   componentDidMount() {
     setTimeout(() => Prism.highlightAll(), 0);
+    console.log(this.props);
     this.setState({ id: this.props.match.params.id });
   }
   copyToClipboard = () => {
@@ -33,15 +35,8 @@ class QuestionAnswer extends Component {
     console.log(this.state.id);
     return (
       <>
-        <header className="header">
-        <span><img style={{position:"relative",bottom:"8%",right:"2%",marginLeft:"7%"}} src={javascript} alt="back" /> <span style={{fontSize:"28px",position:"relative",top:"13%"}}>masters</span></span>
-          <Link to={`/js-masters`}>
-            <nav style={{ position: "fixed", top: "13px", left: "3%" }}>
-              <img src={backarrow} alt="back" />
-            </nav>
-          </Link>
-        </header>
-        <div className=" w3-animate-right card question-container">
+        <Header back="true" />
+        <div className=" w3-animate-right card question-container" style={{position:"relative",top:"55px"}}>
           {currentData && (
             <>
               <div className="card-title">{currentData.title}</div>

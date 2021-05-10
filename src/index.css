@@ -69,6 +69,53 @@ pre[class*="language-"] {
 }
 
 @media only screen and (max-width: 600px) {
+  .user{
+    padding-bottom: 20px;
+  }
+  .overlay{
+    float:right;
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    right: 0;
+    background-color:black;
+    opacity:0.5;
+    transition:opacity 0.2s;
+  }
+  .sidenav {
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition:opacity 0.2s;
+    padding-top: 24px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    text-align:left;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+  }
   .container {
     margin: 0;
     width: 100%;
@@ -82,6 +129,14 @@ pre[class*="language-"] {
     margin-bottom: 5%;
     background-color: white;
     /* border: 3px solid red; */
+  }
+  .sidebar{
+    position:fixed;
+    background: white;
+    width:60%;
+    height:100%;
+    z-index: 999;
+    margin-top:13%
   }
   .card {
     border: none !important;
