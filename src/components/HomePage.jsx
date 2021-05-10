@@ -32,7 +32,7 @@ class HomePage extends Component {
                         View Code
                       </button>
                     </Link>
-                    <img className="star" src={star} alt="back" />
+                    <img className="star" src={star} alt="back" width="25px" height="25px" />
                   </div>
                 </div>
               </div>

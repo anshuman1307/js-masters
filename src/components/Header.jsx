@@ -55,7 +55,7 @@ class Header extends Component {
                   display: "inline-block",
                 }}
               >
-                <img src={backarrow} alt="back" />
+                <img src={backarrow} alt="back"  width="23px" height="23px" />
               </nav>
             </Link>
           )}
@@ -63,7 +63,7 @@ class Header extends Component {
             {" "}
             <svg
               height="24"
-              class="octicon octicon-three-bars"
+              className="octicon octicon-three-bars"
               viewBox="0 0 16 16"
               version="1.1"
               width="24"
@@ -71,7 +71,7 @@ class Header extends Component {
             >
               <path
                 fill="white"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
               ></path>
             </svg>
@@ -88,6 +88,7 @@ class Header extends Component {
             }}
             src={javascript}
             alt="back"
+            width="55px" height="55px"
           />{" "}
           <span style={{ fontSize: "28px", position: "relative", top: "16%" }}>
             masters
@@ -98,24 +99,28 @@ class Header extends Component {
             <div id="overlay" className="overlay" style={{opacity:"0",visibility:"hidden"}} onClick={() => this.toggleSidebar()}></div>
             <div id="mySidenav" className="sidenav" style={{opacity:"0",visibility:"hidden"}}>
               <div className="user">
-                <img src={user} alt="back" />
-                <a href="javascript:void(0)" onClick={() => this.toggleSidebar()} className="closebtn">
+                <img src={user} alt="back"  width="70px" height="70px"  />
+                <a href="#"  onClick={() => this.toggleSidebar()} className="closebtn">
                   &times;
                 </a>
               </div>
-              <a href="#">
-                <img src={saved} alt="back" /> Saved items
+              <a href="#" >
+                <img src={saved} alt="back"  width="19px" height="19px" /> Saved items
               </a>
-              <a href="#">
-                <img src={like} alt="back" /> Popular
+              <a href="#" >
+                <img src={like} alt="back"  width="19px" height="19px" /> Popular
               </a>
-              <a href="#">
-                <img src={feedback} alt="back" /> Feedback
+              <a href="#" >
+                <img src={feedback} alt="back"  width="19px" height="19px" /> Feedback
               </a>
-              <a href="#">
-                <img src={contact} alt="back" /> Contact Us
+              <a href="#" >
+                <img src={contact} alt="back" width="19px" height="19px" /> Contact Us
               </a>
+              {/* <a href="#"  style={{position:"fixed",bottom:"2%",fontSize:"15px",color:"#35a5c9",textDecoration:"underline"}}>
+              See icons attributions
+              </a> */}
             </div>
+            
           </>
         )}
       </header>
