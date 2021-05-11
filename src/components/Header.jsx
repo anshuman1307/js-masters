@@ -16,45 +16,57 @@ class Header extends Component {
     super(props);
     this.state = {
       sidebar: true,
-      isLoggedIn:false
+      isLoggedIn: false,
     };
   }
   toggleSidebar = () => {
-    document.getElementById("mySidenav").style.opacity =
-      document.getElementById("mySidenav").style.opacity == "1" ? "0" : "1";
-    document.getElementById("overlay").style.opacity =
-      document.getElementById("overlay").style.opacity == "0.5" ? "0" : "0.5";
-    document.getElementById("mySidenav").style.visibility =
-      document.getElementById("mySidenav").style.visibility == "visible"
-        ? "hidden"
-        : "visible";
-    document.getElementById("overlay").style.visibility =
-      document.getElementById("overlay").style.visibility == "visible"
-        ? "hidden"
-        : "visible";
+    // document.getElementById("mySidenav").style.opacity =
+    //   document.getElementById("mySidenav").style.opacity == "1" ? "0" : "1";
+    // document.getElementById("overlay").style.opacity =
+    //   document.getElementById("overlay").style.opacity == "0.5" ? "0" : "0.5";
+    // document.getElementById("mySidenav").style.visibility =
+    //   document.getElementById("mySidenav").style.visibility == "visible"
+    //     ? "hidden"
+    //     : "visible";
+    // document.getElementById("overlay").style.visibility =
+    //   document.getElementById("overlay").style.visibility == "visible"
+    //     ? "hidden"
+    //     : "visible";
+    document.getElementById("mySidenav").style.width =
+      document.getElementById("mySidenav").style.width == "65%" ? "0" : "65%";
+    document.getElementById("overlay").style.width =
+      document.getElementById("overlay").style.width == "100%" ? "0" : "100%";
+    document.getElementById("multiply").style.display =
+      document.getElementById("multiply").style.display == "block" ? "none" : "block";
   };
   loginClickHandler = () => {
-    this.setState({isLoggedIn:!this.state.isLoggedIn})
+    this.setState({ isLoggedIn: !this.state.isLoggedIn });
   };
   render() {
     let style =
       this.props.back == "true"
         ? {
             position: "absolute",
-            top: "32%",
+            top: "34%",
             left: "11%",
             display: "inline-block",
           }
         : {
             position: "absolute",
-            top: "32%",
-            left: "4%",
+            top: "34%",
+            left: "5%",
             display: "inline-block",
           };
     return (
       <header
         className="header"
-        style={{ position: "fixed", top: "0", zIndex: "99", width: "100%" }}
+        style={{
+          position: "fixed",
+          top: "0",
+          zIndex: "99",
+          width: "100%",
+          height: "9%",
+        }}
       >
         <div>
           {this.props.back == "true" && (
@@ -62,7 +74,7 @@ class Header extends Component {
               <nav
                 style={{
                   position: "fixed",
-                  top: "17px",
+                  top: "24px",
                   left: "3%",
                   display: "inline-block",
                 }}
@@ -74,18 +86,14 @@ class Header extends Component {
           <span style={style} onClick={() => this.toggleSidebar()}>
             {" "}
             <svg
-              height="24"
-              className="octicon octicon-three-bars"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="24"
-              aria-hidden="true"
+              viewBox="0 0 100 80"
+              width="30"
+              height="30"
+              fill="rgb(15,43,60)"
             >
-              <path
-                fill="rgb(15,43,60)"
-                fillRule="evenodd"
-                d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
-              ></path>
+              <rect width="85" height="7" fill="rgb(15,43,60)"></rect>
+              <rect y="25" width="85" height="7" fill="rgb(15,43,60)"></rect>
+              <rect y="50" width="85" height="7" fill="rgb(15,43,60)"></rect>
             </svg>
           </span>
         </div>
@@ -95,14 +103,14 @@ class Header extends Component {
             style={{
               position: "relative",
               bottom: "0%",
-              top: "2%",
+              top: "7%",
               right: "2%",
               marginLeft: "7%",
             }}
             src={javascript}
             alt="back"
-            width="50px"
-            height="50px"
+            width="60px"
+            height="60px"
           />{" "}
           <span style={{ fontSize: "24px", position: "relative", top: "32%" }}>
             masters
@@ -113,19 +121,19 @@ class Header extends Component {
             <div
               id="overlay"
               className="overlay"
-              style={{ opacity: "0", visibility: "hidden" }}
+              style={{  visibility: "visible",width:"0" }}
               onClick={() => this.toggleSidebar()}
             ></div>
             <div
               id="mySidenav"
               className="sidenav"
-              style={{ opacity: "0", visibility: "hidden" }}
+              style={{  visibility: "visible",width:"0" }}
             >
               <div className="user">
                 {this.state.isLoggedIn && (
                   <div className="sidebar-profile">
                     <img src={user} alt="back" width="40px" height="40px" />{" "}
-                    <div style={{fontWeight:300}}>Anshuman Sharma</div>
+                    <div style={{ fontWeight: 300 }}>Anshuman Sharma</div>
                   </div>
                 )}
                 {!this.state.isLoggedIn && (
@@ -138,6 +146,7 @@ class Header extends Component {
                 )}
 
                 <img
+                  id="multiply"
                   src={multiply}
                   alt="back"
                   width="19px"
@@ -146,25 +155,26 @@ class Header extends Component {
                   style={{
                     float: "right",
                     position: "fixed",
-                    top: "9%",
-                    right: "37%",
+                    top: "11%",
+                    right: "39%",
                     color: "rgb(15,43,60)",
+                    display:"none"
                   }}
                 />
               </div>
               <a href="javascript:void(0)">
-                <img src={saved} alt="back" width="19px" height="19px" /> Saved
+                <img className="mr5 ml2" src={saved} alt="back" width="19px" height="19px" /> Saved
                 items
               </a>
               <a href="javascript:void(0)">
-                <img src={like} alt="back" width="19px" height="19px" /> Popular
+                <img className="mr5 ml2" src={like} alt="back" width="19px" height="19px" /> Popular
               </a>
               <a href="javascript:void(0)">
-                <img src={feedback} alt="back" width="19px" height="19px" />{" "}
+                <img className="mr5 ml2" src={feedback} alt="back" width="19px" height="19px" />{" "}
                 Feedback
               </a>
               <a href="javascript:void(0)">
-                <img src={contact} alt="back" width="19px" height="19px" />{" "}
+                <img className="mr5 ml2" src={contact} alt="back" width="19px" height="19px" />{" "}
                 Contact Us
               </a>
               {/* <a href="#"  style={{position:"fixed",bottom:"2%",fontSize:"15px",color:"#35a5c9",textDecoration:"underline"}}>
