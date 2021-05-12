@@ -24,7 +24,6 @@ class QuestionAnswer extends Component {
   }
   componentDidMount() {
     setTimeout(() => Prism.highlightAll(), 0);
-    console.log(this.props);
     this.setState({ id: this.props.match.params.id });
   }
   copyToClipboard = () => {
@@ -39,7 +38,6 @@ class QuestionAnswer extends Component {
     if (this.state.id) {
       currentData = data[this.state.id - 1];
     }
-    console.log(this.state.id);
     return (
       <>
         <Header back="true" />
