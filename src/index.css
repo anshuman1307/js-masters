@@ -191,10 +191,10 @@ pre[class*="language-"] {
     position: relative;
     float: right;
   }
- .mr5{
-   margin-right: 8%;
- }
- .ml2{
-   margin-left: 2%;
- }
+  .mr5 {
+    margin-right: 8%;
+  }
+  .ml2 {
+    margin-left: 2%;
+  }
 }

@@ -29,7 +29,7 @@ class QuestionAnswer extends Component {
   };
   render() {
     let currentData;
-    if (this.state.id) {
+    if (this.state.id) {  
       currentData = data[this.state.id - 1];
     }
     console.log(this.state.id);

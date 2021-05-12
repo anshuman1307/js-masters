@@ -37,7 +37,9 @@ class Header extends Component {
     document.getElementById("overlay").style.width =
       document.getElementById("overlay").style.width == "100%" ? "0" : "100%";
     document.getElementById("multiply").style.display =
-      document.getElementById("multiply").style.display == "block" ? "none" : "block";
+      document.getElementById("multiply").style.display == "block"
+        ? "none"
+        : "block";
   };
   loginClickHandler = () => {
     this.setState({ isLoggedIn: !this.state.isLoggedIn });
@@ -121,13 +123,13 @@ class Header extends Component {
             <div
               id="overlay"
               className="overlay"
-              style={{  visibility: "visible",width:"0" }}
+              style={{ visibility: "visible", width: "0" }}
               onClick={() => this.toggleSidebar()}
             ></div>
             <div
               id="mySidenav"
               className="sidenav"
-              style={{  visibility: "visible",width:"0" }}
+              style={{ visibility: "visible", width: "0" }}
             >
               <div className="user">
                 {this.state.isLoggedIn && (
@@ -158,23 +160,48 @@ class Header extends Component {
                     top: "11%",
                     right: "39%",
                     color: "rgb(15,43,60)",
-                    display:"none"
+                    display: "none",
                   }}
                 />
               </div>
               <a href="javascript:void(0)">
-                <img className="mr5 ml2" src={saved} alt="back" width="19px" height="19px" /> Saved
-                items
+                <img
+                  className="mr5 ml2"
+                  src={saved}
+                  alt="back"
+                  width="19px"
+                  height="19px"
+                />{" "}
+                Saved items
               </a>
               <a href="javascript:void(0)">
-                <img className="mr5 ml2" src={like} alt="back" width="19px" height="19px" /> Popular
+                <img
+                  className="mr5 ml2"
+                  src={like}
+                  alt="back"
+                  width="19px"
+                  height="19px"
+                />{" "}
+                Popular
               </a>
               <a href="javascript:void(0)">
-                <img className="mr5 ml2" src={feedback} alt="back" width="19px" height="19px" />{" "}
+                <img
+                  className="mr5 ml2"
+                  src={feedback}
+                  alt="back"
+                  width="19px"
+                  height="19px"
+                />{" "}
                 Feedback
               </a>
               <a href="javascript:void(0)">
-                <img className="mr5 ml2" src={contact} alt="back" width="19px" height="19px" />{" "}
+                <img
+                  className="mr5 ml2"
+                  src={contact}
+                  alt="back"
+                  width="19px"
+                  height="19px"
+                />{" "}
                 Contact Us
               </a>
               {/* <a href="#"  style={{position:"fixed",bottom:"2%",fontSize:"15px",color:"#35a5c9",textDecoration:"underline"}}>
