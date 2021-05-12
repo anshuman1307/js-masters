@@ -29,14 +29,14 @@ class QuestionAnswer extends Component {
   };
   render() {
     let currentData;
-    if (this.state.id) {  
+    if (this.state.id) {
       currentData = data[this.state.id - 1];
     }
     console.log(this.state.id);
     return (
       <>
         <Header back="true" />
-        <div
+        <div       
           className=" w3-animate-right card question-container"
           style={{ position: "relative", top: "67px" }}
         >
