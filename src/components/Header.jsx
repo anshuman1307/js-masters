@@ -21,23 +21,23 @@ class Header extends Component {
   }
   toggleSidebar = () => {
     // document.getElementById("mySidenav").style.opacity =
-    //   document.getElementById("mySidenav").style.opacity == "1" ? "0" : "1";
+    //   document.getElementById("mySidenav").style.opacity === "1" ? "0" : "1";
     // document.getElementById("overlay").style.opacity =
-    //   document.getElementById("overlay").style.opacity == "0.5" ? "0" : "0.5";
+    //   document.getElementById("overlay").style.opacity === "0.5" ? "0" : "0.5";
     // document.getElementById("mySidenav").style.visibility =
-    //   document.getElementById("mySidenav").style.visibility == "visible"
+    //   document.getElementById("mySidenav").style.visibility === "visible"
     //     ? "hidden"
     //     : "visible";
     // document.getElementById("overlay").style.visibility =
-    //   document.getElementById("overlay").style.visibility == "visible"
+    //   document.getElementById("overlay").style.visibility === "visible"
     //     ? "hidden"
     //     : "visible";
     document.getElementById("mySidenav").style.width =
-      document.getElementById("mySidenav").style.width == "65%" ? "0" : "65%";
+      document.getElementById("mySidenav").style.width === "65%" ? "0" : "65%";
     document.getElementById("overlay").style.width =
-      document.getElementById("overlay").style.width == "100%" ? "0" : "100%";
+      document.getElementById("overlay").style.width === "100%" ? "0" : "100%";
     document.getElementById("multiply").style.display =
-      document.getElementById("multiply").style.display == "block"
+      document.getElementById("multiply").style.display === "block"
         ? "none"
         : "block";
   };
@@ -46,7 +46,7 @@ class Header extends Component {
   };
   render() {
     let style =
-      this.props.back == "true"
+      this.props.back === "true"
         ? {
             position: "absolute",
             top: "34%",
@@ -71,7 +71,7 @@ class Header extends Component {
         }}
       >
         <div>
-          {this.props.back == "true" && (
+          {this.props.back === "true" && (
             <Link to={`/js-masters`}>
               <nav
                 style={{
