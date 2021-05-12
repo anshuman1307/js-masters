@@ -2,6 +2,7 @@ body > #root > div {
   height: 100%;
   background-color: rgb(241, 242, 242);
 }
+
 pre {
   background: black;
   border: 1px solid #ddd;
@@ -19,6 +20,7 @@ pre {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
 code[class*="language-"],
 pre[class*="language-"] {
   background: black;
@@ -26,6 +28,7 @@ pre[class*="language-"] {
   text-shadow: none;
   /* white-space: pre-wrap; */
 }
+
 .header {
   background-color: white;
   border-color: #dee0e1 !important;
@@ -37,6 +40,7 @@ pre[class*="language-"] {
   font-family: monospace;
   border-bottom: 1px solid rgb(15, 43, 60);
 }
+
 .container {
   margin: auto;
   margin-top: 3%;
@@ -47,24 +51,30 @@ pre[class*="language-"] {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .container > .question-list {
   margin-bottom: 5%;
   background-color: white;
   /* border: 3px solid red; */
 }
+
 .card {
   border: none !important;
 }
+
 .card-title {
   font-weight: 700;
 }
+
 .card-text {
   font-size: 18px;
   font-style: italic;
 }
+
 .inptotpt {
   margin-bottom: 4%;
 }
+
 .inptotpt > p {
   margin-bottom: 0%;
 }
@@ -73,10 +83,12 @@ pre[class*="language-"] {
   .user {
     padding-bottom: 20px;
   }
+
   .sidebar-profile {
     font-size: 20px;
     padding-top: 9%;
   }
+
   .signin-btn {
     position: relative;
     width: 157px;
@@ -88,6 +100,7 @@ pre[class*="language-"] {
     border-radius: 5px;
     background-color: rgb(16 17 19 / 82%);
   }
+
   .overlay {
     float: right;
     height: 100%;
@@ -99,6 +112,7 @@ pre[class*="language-"] {
     background-color: black;
     opacity: 0.5;
   }
+
   .sidenav {
     height: 100%;
     width: 65%;
@@ -138,6 +152,7 @@ pre[class*="language-"] {
     right: 10px;
     font-size: 36px;
   }
+
   .container {
     margin: 0;
     width: 100%;
@@ -147,11 +162,13 @@ pre[class*="language-"] {
     flex-direction: column;
     justify-content: flex-start;
   }
+
   .container > .question-list {
     margin-bottom: 5%;
     background-color: white;
     /* border: 3px solid red; */
   }
+
   .sidebar {
     position: fixed;
     background: white;
@@ -160,41 +177,53 @@ pre[class*="language-"] {
     z-index: 999;
     margin-top: 13%;
   }
+
   .card {
     border: none !important;
     width: 100% !important;
   }
+
   .card-title {
     font-weight: 700;
   }
+
   .card-text {
     font-size: 18px;
     font-style: italic;
   }
+
   .inptotpt {
     margin-bottom: 4%;
   }
+
   .detailsinptotpt {
     margin-top: 2%;
     margin-bottom: 5%;
   }
+
   .detailsinptotpt > p {
     margin-bottom: 0;
   }
+
   .inptotpt > p {
     margin-bottom: 0%;
   }
+
   .question-container {
     padding: 5%;
   }
+
   .star {
     position: relative;
     float: right;
   }
+
   .mr5 {
     margin-right: 8%;
   }
+
   .ml2 {
     margin-left: 2%;
   }
+  
 }
