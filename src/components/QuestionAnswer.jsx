@@ -36,7 +36,7 @@ class QuestionAnswer extends Component {
     return (
       <>
         <Header back="true" />
-        <div       
+        <div
           className=" w3-animate-right card question-container"
           style={{ position: "relative", top: "67px" }}
         >
