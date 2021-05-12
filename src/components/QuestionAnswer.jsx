@@ -8,6 +8,13 @@ import backarrow from "../arrow-left-solid.svg";
 import star from "../star.svg";
 import javascript from "../javascript.svg";
 
+/* 
+Code page.
+This page uses Prism.js to highlight the code in different colors
+Needs improvisations and perfromance rectification
+May 12,2021 - Anshuman Sharma
+*/
+
 class QuestionAnswer extends Component {
   constructor(props) {
     super(props);
